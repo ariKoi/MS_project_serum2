@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-06">
+<meta name="dcterms.date" content="2026-09-10">
 
 <title>Serum lipidomics in CIS versus MS: a site-confounded discovery analysis</title>
 <style>
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
-</style>
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}</style>
 
 
 <script>/*!
@@ -3650,7 +3670,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 6, 2026</p>
+      <p class="date">September 10, 2026</p>
     </div>
   </div>
   
@@ -11923,7 +11943,7 @@ height: 0px !important;
 <p>Every substrate class is depleted in batch1 (PE, PC, PI, CE, SM) and every hydrolysis product enriched (LPC, DG, Cer) i.e. phosphatidylcholine loses a chain to become lysophosphatidylcholine, triacylglycerol becomes diacylglycerol, sphingomyelin becomes ceramide.</p>
 <p>That pattern is suggestive but not decisive on its own, because the two batches are different patients. Phospholipase A2 is active in vivo as well as in a freezer, so a group of patients with more inflammation would also show a raised product-to-substrate ratio. A test that a population difference <em>cannot</em> imitate is needed, and the enzyme’s positional chemistry supplies one.</p>
 <p>Phosphatidylcholine has a glycerol backbone carrying a fatty acid at position <em>sn</em>-1, a second at <em>sn</em>-2, and a phosphocholine head group at <em>sn</em>-3. Phospholipase A2 cleaves specifically at sn-2, releasing that chain and leaving lysophosphatidylcholine behind. Biology places these chains non-randomly: <em>sn</em>-1 typically carries a saturated fatty acid (16:0, 18:0) while <em>sn</em>-2 typically carries an unsaturated or polyunsaturated one (18:2, 20:4, 22:6). Double bonds are therefore concentrated at exactly the position the enzyme attacks.</p>
-<p>Feature names give sum composition, <code>PC_38_6</code> is 38 carbons and 6 double bonds across both chains, so a species with many double bonds must be carrying a polyunsaturated chain, almost certainly at <em>sn</em>-2. If phospholipase activity caused the depletion, the loss should therefore scale with double-bond count. A difference between two patient populations offers no reason for such a gradient to exist. polyunsaturated PC species are depleted <em>more</em> than saturated ones (Spearman <span class="math inline">\(\rho = -0.56\)</span>, <span class="math inline">\(p = 0.0078\)</span>), which is the sn-2 positional specificity a phospholipase produces and which a difference between two patient populations would not generate.</p>
+<p>Feature names give sum composition, <code>PC_38_6</code> is 38 carbons and 6 double bonds across both chains, so a species with many double bonds must be carrying a polyunsaturated chain, almost certainly at <em>sn</em>-2. If phospholipase activity caused the depletion, the loss should therefore scale with double-bond count. A difference between two patient populations offers no reason for such a gradient to exist. polyunsaturated PC species are depleted <em>more</em> than saturated ones (Spearman <span class="math inline">\(\rho = -0.56\)</span>, <span class="math inline">\(p = 0.0078\)</span>), which is the sn-2 positional specificity a phospholipase produces <span class="citation" data-cites="ishikawa2014">(<a href="#ref-ishikawa2014" role="doc-biblioref">Ishikawa et al. 2014</a>)</span> and which a difference between two patient populations would not generate.</p>
 <p>The gradient is present on the substrate side. The product side is less tidy: LPC species are uniformly enriched (intercept +0.20, p = 0.0007) but show no double-bond trend. If cleavage were purely at <em>sn</em>-2 the retained <em>sn</em>-1 chain would usually be saturated, so enrichment should have concentrated among low-double-bond LPC species. Flat enrichment instead suggests either mixed phospholipase A1 and A2 activity, or that LPC is itself being consumed further by lysophospholipases, which would flatten the product profile.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -13321,9 +13341,14 @@ height: 0px !important;
 </div>
 </div>
 </div>
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ishikawa2014" class="csl-entry" role="listitem">
+Ishikawa, Masaki et al. 2014. <span>“Plasma and Serum Lipidomics of Healthy White Adults Shows Characteristic Profiles by Subjects’ Gender and Age.”</span> <em>PLOS ONE</em> 9 (3): e91806. <a href="https://doi.org/10.1371/journal.pone.0091806">https://doi.org/10.1371/journal.pone.0091806</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -11492,6 +11492,10 @@ height: 0px !important;
 </div>
 </div>
 </div>
+<p>Every substrate class is depleted in batch1 (PE, PC, PI, CE, SM) and every hydrolysis product enriched (LPC, DG, Cer) i.e. phosphatidylcholine loses a chain to become lysophosphatidylcholine, triacylglycerol becomes diacylglycerol, sphingomyelin becomes ceramide <span class="citation" data-cites="ishikawa2014 reis2021">(<a href="#ref-ishikawa2014" role="doc-biblioref">Ishikawa et al. 2014</a>; <a href="#ref-reis2021" role="doc-biblioref">Reis et al. 2021</a>)</span>.</p>
+<p>That pattern is suggestive but not decisive on its own, because the two batches are different patients. Phospholipase A2 is active in vivo as well as in a freezer, so a group of patients with more inflammation would also show a raised product-to-substrate ratio. A test that a population difference <em>cannot</em> imitate is needed, and the enzyme’s positional chemistry supplies one.</p>
+<p>Phosphatidylcholine has a glycerol backbone carrying a fatty acid at position <em>sn</em>-1, a second at <em>sn</em>-2, and a phosphocholine head group at <em>sn</em>-3. Phospholipase A2 cleaves specifically at <em>sn</em>-2, releasing that chain and leaving lysophosphatidylcholine behind <span class="citation" data-cites="khan2023 mouchlis2019">(<a href="#ref-khan2023" role="doc-biblioref">Khan and Ilies 2023</a>; <a href="#ref-mouchlis2019" role="doc-biblioref">Mouchlis and Dennis 2019</a>)</span>. Biology places these chains non-randomly: <em>sn</em>-1 typically carries a saturated fatty acid (16:0, 18:0) while <em>sn</em>-2 typically carries an unsaturated or polyunsaturated one (18:2, 20:4, 22:6) <span class="citation" data-cites="mouchlis2019">(<a href="#ref-mouchlis2019" role="doc-biblioref">Mouchlis and Dennis 2019</a>)</span>. That asymmetry is maintained by the Lands cycle, in which phospholipids are deacylated and reacylated with different chains, preferentially incorporating polyunsaturated fatty acids <span class="citation" data-cites="jackson2008">(<a href="#ref-jackson2008" role="doc-biblioref">Jackson, Abate, and Tonks 2008</a>)</span>. Double bonds are therefore concentrated at exactly the position the enzyme attacks.</p>
+<p>Feature names give sum composition, <code>PC_38_6</code> is 38 carbons and 6 double bonds across both chains, so a species with many double bonds must be carrying a polyunsaturated chain, almost certainly at <em>sn</em>-2. If phospholipase activity caused the depletion, the loss should therefore scale with double-bond count. A difference between two patient populations offers no reason for such a gradient to exist.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="ryxugnlawb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -11940,10 +11944,7 @@ height: 0px !important;
 </div>
 </div>
 </div>
-<p>Every substrate class is depleted in batch1 (PE, PC, PI, CE, SM) and every hydrolysis product enriched (LPC, DG, Cer) i.e. phosphatidylcholine loses a chain to become lysophosphatidylcholine, triacylglycerol becomes diacylglycerol, sphingomyelin becomes ceramide.</p>
-<p>That pattern is suggestive but not decisive on its own, because the two batches are different patients. Phospholipase A2 is active in vivo as well as in a freezer, so a group of patients with more inflammation would also show a raised product-to-substrate ratio. A test that a population difference <em>cannot</em> imitate is needed, and the enzyme’s positional chemistry supplies one.</p>
-<p>Phosphatidylcholine has a glycerol backbone carrying a fatty acid at position <em>sn</em>-1, a second at <em>sn</em>-2, and a phosphocholine head group at <em>sn</em>-3. Phospholipase A2 cleaves specifically at sn-2, releasing that chain and leaving lysophosphatidylcholine behind. Biology places these chains non-randomly: <em>sn</em>-1 typically carries a saturated fatty acid (16:0, 18:0) while <em>sn</em>-2 typically carries an unsaturated or polyunsaturated one (18:2, 20:4, 22:6). Double bonds are therefore concentrated at exactly the position the enzyme attacks.</p>
-<p>Feature names give sum composition, <code>PC_38_6</code> is 38 carbons and 6 double bonds across both chains, so a species with many double bonds must be carrying a polyunsaturated chain, almost certainly at <em>sn</em>-2. If phospholipase activity caused the depletion, the loss should therefore scale with double-bond count. A difference between two patient populations offers no reason for such a gradient to exist. polyunsaturated PC species are depleted <em>more</em> than saturated ones (Spearman <span class="math inline">\(\rho = -0.56\)</span>, <span class="math inline">\(p = 0.0078\)</span>), which is the sn-2 positional specificity a phospholipase produces <span class="citation" data-cites="ishikawa2014">(<a href="#ref-ishikawa2014" role="doc-biblioref">Ishikawa et al. 2014</a>)</span> and which a difference between two patient populations would not generate.</p>
+<p>Polyunsaturated PC species are depleted <em>more</em> than saturated ones (Spearman <span class="math inline">\(\rho = -0.56\)</span>, <span class="math inline">\(p = 0.0078\)</span>), which is the <em>sn</em>-2 positional specificity a phospholipase produces <span class="citation" data-cites="khan2023 mouchlis2019">(<a href="#ref-khan2023" role="doc-biblioref">Khan and Ilies 2023</a>; <a href="#ref-mouchlis2019" role="doc-biblioref">Mouchlis and Dennis 2019</a>)</span> and which a difference between two patient populations would not generate.</p>
 <p>The gradient is present on the substrate side. The product side is less tidy: LPC species are uniformly enriched (intercept +0.20, p = 0.0007) but show no double-bond trend. If cleavage were purely at <em>sn</em>-2 the retained <em>sn</em>-1 chain would usually be saturated, so enrichment should have concentrated among low-double-bond LPC species. Flat enrichment instead suggests either mixed phospholipase A1 and A2 activity, or that LPC is itself being consumed further by lysophospholipases, which would flatten the product profile.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -11955,7 +11956,7 @@ height: 0px !important;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Sum composition does not say <em>which</em> chain carries the double bonds, so double-bond count is a proxy for <em>sn</em>-2 unsaturation rather than a direct measure. And polyunsaturated species are also the most susceptible to autoxidation, which freeze-thawing likewise promotes; so the gradient alone is consistent with oxidation as well as hydrolysis. It is the simultaneous <em>enrichment of LPC</em> that points specifically at hydrolysis, since oxidation would not generate LPC.</p>
+<p>Sum composition does not say <em>which</em> chain carries the double bonds <span class="citation" data-cites="liebisch2013 liebisch2020">(<a href="#ref-liebisch2013" role="doc-biblioref">Liebisch et al. 2013</a>, <a href="#ref-liebisch2020" role="doc-biblioref">2020</a>)</span>, so double-bond count is a proxy for <em>sn</em>-2 unsaturation rather than a direct measure. And polyunsaturated species are also the most susceptible to autoxidation, which freeze-thawing likewise promotes; so the gradient alone is consistent with oxidation as well as hydrolysis. It is the simultaneous <em>enrichment of LPC</em> that points specifically at hydrolysis <span class="citation" data-cites="reis2021">(<a href="#ref-reis2021" role="doc-biblioref">Reis et al. 2021</a>)</span>, since oxidation would not generate LPC.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -13346,7 +13347,25 @@ height: 0px !important;
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ishikawa2014" class="csl-entry" role="listitem">
-Ishikawa, Masaki et al. 2014. <span>“Plasma and Serum Lipidomics of Healthy White Adults Shows Characteristic Profiles by Subjects’ Gender and Age.”</span> <em>PLOS ONE</em> 9 (3): e91806. <a href="https://doi.org/10.1371/journal.pone.0091806">https://doi.org/10.1371/journal.pone.0091806</a>.
+Ishikawa, Masaki, Keiko Maekawa, Kosuke Saito, Yuya Senoo, Masayo Urata, Mayumi Murayama, Yoko Tajima, Yuji Kumagai, and Yoshiro Saito. 2014. <span>“Plasma and Serum Lipidomics of Healthy White Adults Shows Characteristic Profiles by Subjects’ Gender and Age.”</span> <em>PLOS ONE</em> 9 (3): e91806. <a href="https://doi.org/10.1371/journal.pone.0091806">https://doi.org/10.1371/journal.pone.0091806</a>.
+</div>
+<div id="ref-jackson2008" class="csl-entry" role="listitem">
+Jackson, Simon K., Wondwossen Abate, and Amanda J. Tonks. 2008. <span>“Lysophospholipid Acyltransferases: Novel Potential Regulators of the Inflammatory Response and Target for New Drug Discovery.”</span> <em>Pharmacology &amp; Therapeutics</em> 119 (1): 104–14. https://doi.org/<a href="https://doi.org/10.1016/j.pharmthera.2008.04.001">https://doi.org/10.1016/j.pharmthera.2008.04.001</a>.
+</div>
+<div id="ref-khan2023" class="csl-entry" role="listitem">
+Khan, Shibbir Ahmed, and Marc A. Ilies. 2023. <span>“The Phospholipase <span>A2</span> Superfamily: Structure, Isozymes, Catalysis, Physiologic and Pathologic Roles.”</span> <em>International Journal of Molecular Sciences</em> 24 (2): 1353. <a href="https://doi.org/10.3390/ijms24021353">https://doi.org/10.3390/ijms24021353</a>.
+</div>
+<div id="ref-liebisch2020" class="csl-entry" role="listitem">
+Liebisch, Gerhard, Eoin Fahy, Junken Aoki, Edward A. Dennis, Thierry Durand, Christer S. Ejsing, Maria Fedorova, et al. 2020. <span>“Update on LIPID MAPS Classification, Nomenclature, and Shorthand Notation for MS-Derived Lipid Structures.”</span> <em>Journal of Lipid Research</em> 61 (12): 1539–55. https://doi.org/<a href="https://doi.org/10.1194/jlr.S120001025">https://doi.org/10.1194/jlr.S120001025</a>.
+</div>
+<div id="ref-liebisch2013" class="csl-entry" role="listitem">
+Liebisch, Gerhard, Juan Antonio Vizcaíno, Harald Köfeler, Martin Trötzmüller, William J. Griffiths, Gerd Schmitz, Friedrich Spener, and Michael J. O. Wakelam. 2013. <span>“Shorthand Notation for Lipid Structures Derived from Mass Spectrometry.”</span> <em>Journal of Lipid Research</em> 54 (6): 1523–30. <a href="https://doi.org/10.1194/jlr.M033506">https://doi.org/10.1194/jlr.M033506</a>.
+</div>
+<div id="ref-mouchlis2019" class="csl-entry" role="listitem">
+Mouchlis, Varnavas D., and Edward A. Dennis. 2019. <span>“Phospholipase A2 Catalysis and Lipid Mediator Lipidomics.”</span> <em>Biochimica Et Biophysica Acta (BBA) - Molecular and Cell Biology of Lipids</em> 1864 (6): 766–71. https://doi.org/<a href="https://doi.org/10.1016/j.bbalip.2018.08.010">https://doi.org/10.1016/j.bbalip.2018.08.010</a>.
+</div>
+<div id="ref-reis2021" class="csl-entry" role="listitem">
+Reis, Gregory B., Jon C. Rees, Anna A. Ivanova, Zsuzsanna Kuklenyik, Nathan M. Drew, James L. Pirkle, and John R. Barr. 2021. <span>“Stability of Lipids in Plasma and Serum: Effects of Temperature-Related Storage Conditions on the Human Lipidome.”</span> <em>Journal of Mass Spectrometry and Advances in the Clinical Lab</em> 22: 34–42. <a href="https://doi.org/10.1016/j.jmsacl.2021.10.002">https://doi.org/10.1016/j.jmsacl.2021.10.002</a>.
 </div>
 </div></section></div></main>
 <!-- /main column -->

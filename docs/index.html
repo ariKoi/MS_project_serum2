@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-10">
+<meta name="dcterms.date" content="2026-09-14">
 
 <title>Serum lipidomics in CIS versus MS: a site-confounded discovery analysis</title>
 <style>
@@ -3644,14 +3644,22 @@ window.Quarto = {
   <li><a href="#effect-size" id="toc-effect-size" class="nav-link" data-scroll-target="#effect-size">Effect size</a></li>
   <li><a href="#sub-threshold-features" id="toc-sub-threshold-features" class="nav-link" data-scroll-target="#sub-threshold-features">Sub-threshold features</a></li>
   </ul></li>
-  <li><a href="#technical-quality-control" id="toc-technical-quality-control" class="nav-link" data-scroll-target="#technical-quality-control"><span class="header-section-number">8</span> Technical quality control</a>
+  <li><a href="#sensitivity-analyses" id="toc-sensitivity-analyses" class="nav-link" data-scroll-target="#sensitivity-analyses"><span class="header-section-number">8</span> Sensitivity analyses</a>
+  <ul class="collapse">
+  <li><a href="#adjustment-for-blood-brain-barrier-integrity" id="toc-adjustment-for-blood-brain-barrier-integrity" class="nav-link" data-scroll-target="#adjustment-for-blood-brain-barrier-integrity">Adjustment for blood-brain-barrier integrity</a>
+  <ul class="collapse">
+  <li><a href="#what-qalb-looks-like-across-the-two-groups" id="toc-what-qalb-looks-like-across-the-two-groups" class="nav-link" data-scroll-target="#what-qalb-looks-like-across-the-two-groups">What QAlb looks like across the two groups</a></li>
+  <li><a href="#the-candidate-feature-with-and-without-adjustment" id="toc-the-candidate-feature-with-and-without-adjustment" class="nav-link" data-scroll-target="#the-candidate-feature-with-and-without-adjustment">The candidate feature, with and without adjustment</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#technical-quality-control" id="toc-technical-quality-control" class="nav-link" data-scroll-target="#technical-quality-control"><span class="header-section-number">9</span> Technical quality control</a>
   <ul class="collapse">
   <li><a href="#freeze-thaw-degradation-in-auth-batch1" id="toc-freeze-thaw-degradation-in-auth-batch1" class="nav-link" data-scroll-target="#freeze-thaw-degradation-in-auth-batch1">Freeze-thaw degradation in AUTH batch1</a></li>
   <li><a href="#analytical-identity-of-the-candidate" id="toc-analytical-identity-of-the-candidate" class="nav-link" data-scroll-target="#analytical-identity-of-the-candidate">Analytical identity of the candidate</a></li>
   </ul></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">9</span> Limitations</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">10</span> Conclusions</a></li>
-  <li><a href="#reproducibility-1" id="toc-reproducibility-1" class="nav-link" data-scroll-target="#reproducibility-1"><span class="header-section-number">11</span> Reproducibility</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">10</span> Limitations</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">11</span> Conclusions</a></li>
+  <li><a href="#reproducibility-1" id="toc-reproducibility-1" class="nav-link" data-scroll-target="#reproducibility-1"><span class="header-section-number">12</span> Reproducibility</a></li>
   </ul>
 </nav>
 </div>
@@ -3670,7 +3678,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2026</p>
+      <p class="date">September 14, 2026</p>
     </div>
   </div>
   
@@ -11051,8 +11059,915 @@ height: 0px !important;
 <p>The one worth naming individually is <code>lip_662_44636_Da_484_50_s</code>: inclusion frequency 0.37 in the primary analysis and 0.28 at Eginitio, adjusted <span class="math inline">\(p = 0.0039\)</span> with OR 0.013. It survives FDR in neither analysis, but it is the only secondary candidate that ranks near the top in both.</p>
 </section>
 </section>
-<section id="technical-quality-control" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Technical quality control</h1>
+<section id="sensitivity-analyses" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Sensitivity analyses</h1>
+<section id="adjustment-for-blood-brain-barrier-integrity" class="level2">
+<h2 class="anchored" data-anchor-id="adjustment-for-blood-brain-barrier-integrity">Adjustment for blood-brain-barrier integrity</h2>
+<p>The albumin quotient, QAlb, is CSF albumin divided by serum albumin and multiplied by 1000. Albumin is made in the liver and not in the brain, so whatever is found in cerebrospinal fluid has crossed the blood-brain barrier; the ratio is therefore a standard measure of how permeable that barrier is. A raised QAlb means a leakier barrier.</p>
+<p>This matters because of an alternative explanation for the candidate feature. If barrier permeability differs between CIS and MS patients, and if a leakier barrier changes what appears in serum, then a lipid associated with disease status might be tracking barrier integrity rather than anything specific to the disease. Adjusting for QAlb tests that: if the association were a barrier readout, it should shrink towards no effect once QAlb is in the model.</p>
+<p>QAlb is not in the main models for a separate reason. Obtaining it requires a lumbar puncture, and a blood test that needs a lumbar puncture to work has given up its main practical advantage. It is used here only as a check on the candidate, not as a predictor.</p>
+<section id="what-qalb-looks-like-across-the-two-groups" class="level3">
+<h3 class="anchored" data-anchor-id="what-qalb-looks-like-across-the-two-groups">What QAlb looks like across the two groups</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fwqaxsqpwr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fwqaxsqpwr table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+#fwqaxsqpwr thead, #fwqaxsqpwr tbody, #fwqaxsqpwr tfoot, #fwqaxsqpwr tr, #fwqaxsqpwr td, #fwqaxsqpwr th {
+border-style: none;
+}
+#fwqaxsqpwr p {
+margin: 0;
+padding: 0;
+}
+#fwqaxsqpwr .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#fwqaxsqpwr .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#fwqaxsqpwr .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#fwqaxsqpwr .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#fwqaxsqpwr .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#fwqaxsqpwr .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#fwqaxsqpwr .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#fwqaxsqpwr .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#fwqaxsqpwr .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#fwqaxsqpwr .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#fwqaxsqpwr .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#fwqaxsqpwr .gt_from_md > :first-child {
+margin-top: 0;
+}
+#fwqaxsqpwr .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#fwqaxsqpwr .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#fwqaxsqpwr .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#fwqaxsqpwr .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#fwqaxsqpwr .gt_row_group_first td {
+border-top-width: 2px;
+}
+#fwqaxsqpwr .gt_row_group_first th {
+border-top-width: 2px;
+}
+#fwqaxsqpwr .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#fwqaxsqpwr .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#fwqaxsqpwr .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#fwqaxsqpwr .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#fwqaxsqpwr .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#fwqaxsqpwr .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#fwqaxsqpwr .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#fwqaxsqpwr .gt_left {
+text-align: left;
+}
+#fwqaxsqpwr .gt_center {
+text-align: center;
+}
+#fwqaxsqpwr .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#fwqaxsqpwr .gt_font_normal {
+font-weight: normal;
+}
+#fwqaxsqpwr .gt_font_bold {
+font-weight: bold;
+}
+#fwqaxsqpwr .gt_font_italic {
+font-style: italic;
+}
+#fwqaxsqpwr .gt_super {
+font-size: 65%;
+}
+#fwqaxsqpwr .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#fwqaxsqpwr .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#fwqaxsqpwr .gt_indent_1 {
+text-indent: 5px;
+}
+#fwqaxsqpwr .gt_indent_2 {
+text-indent: 10px;
+}
+#fwqaxsqpwr .gt_indent_3 {
+text-indent: 15px;
+}
+#fwqaxsqpwr .gt_indent_4 {
+text-indent: 20px;
+}
+#fwqaxsqpwr .gt_indent_5 {
+text-indent: 25px;
+}
+#fwqaxsqpwr .katex-display {
+display: inline-flex !important;
+margin-bottom: 0.75em !important;
+}
+#fwqaxsqpwr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="5" class="gt_heading gt_title gt_font_normal">Albumin quotient by group</td>
+</tr>
+<tr class="gt_heading even">
+<td colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Analysis cohort, n = 113; no missing values</td>
+</tr>
+<tr class="gt_col_headings header">
+<th id="Group" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Group</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">n</th>
+<th id="q25" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">q25</th>
+<th id="median" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">median</th>
+<th id="q75" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">q75</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="Group">MS</td>
+<td class="gt_row gt_right" headers="n">84</td>
+<td class="gt_row gt_right" headers="q25">3.13</td>
+<td class="gt_row gt_right" headers="median">3.96</td>
+<td class="gt_row gt_right" headers="q75">6.10</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="Group">CIS</td>
+<td class="gt_row gt_right" headers="n">29</td>
+<td class="gt_row gt_right" headers="q25">3.91</td>
+<td class="gt_row gt_right" headers="median">4.78</td>
+<td class="gt_row gt_right" headers="q75">6.78</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>The two groups overlap a great deal. The medians differ by about -0.82 units, while the middle half of each group spans roughly three times that, so a randomly picked CIS patient is only modestly more likely to have a higher QAlb than a randomly picked MS patient.</p>
+<p>A rank test gives p = 0.056, which sits just outside the conventional 5% mark. That is not in tension with the overlap. A p-value combines the size of the shift with the sample size, so with 113 patients even a modest shift can approach the conventional threshold. What matters for this check is the size, and expressed relative to the spread within each group it is about a quarter of an interquartile range i.e. small.</p>
+<p>Direction-wise the CIS patients sit slightly higher, instead of lower, the reverse of what we would expect if barrier damage simply accumulated over the course of the disease. This could be the case for one of the following two reasons:</p>
+<ul>
+<li>The initial inflammation during a first attack (CIS) causes just as much leakage as long-term disease (MS).</li>
+<li>Patients receiving treatment for long-term disease (MS) have less leakage than untreated first-attack patients (CIS).</li>
+</ul>
+<p>Either way, because the barrier leakage is almost the same in both groups, it cannot explain the differences between them.</p>
+<p>Every patient in the analysis cohort has a QAlb value, because lumbar puncture is part of standard diagnostic testing for both CIS and MS. This check therefore runs on measured values across the whole sample, with no imputation. It is also one place where excluding the healthy controls helps: they would mostly have had no CSF sample, since there is no clinical reason to perform a lumbar puncture on a healthy volunteer, and missingness would have lined up almost exactly with group membership i.e. restricting to CIS and MS removes the problem, because both groups get the procedure as a matter of clinical routine.</p>
+</section>
+<section id="the-candidate-feature-with-and-without-adjustment" class="level3">
+<h3 class="anchored" data-anchor-id="the-candidate-feature-with-and-without-adjustment">The candidate feature, with and without adjustment</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="ryxugnlawb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ryxugnlawb table {
+font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+#ryxugnlawb thead, #ryxugnlawb tbody, #ryxugnlawb tfoot, #ryxugnlawb tr, #ryxugnlawb td, #ryxugnlawb th {
+border-style: none;
+}
+#ryxugnlawb p {
+margin: 0;
+padding: 0;
+}
+#ryxugnlawb .gt_table {
+display: table;
+border-collapse: collapse;
+line-height: normal;
+margin-left: auto;
+margin-right: auto;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+background-color: #FFFFFF;
+width: auto;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #A8A8A8;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #A8A8A8;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+}
+#ryxugnlawb .gt_caption {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+#ryxugnlawb .gt_title {
+color: #333333;
+font-size: 125%;
+font-weight: initial;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-color: #FFFFFF;
+border-bottom-width: 0;
+}
+#ryxugnlawb .gt_subtitle {
+color: #333333;
+font-size: 85%;
+font-weight: initial;
+padding-top: 3px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-color: #FFFFFF;
+border-top-width: 0;
+}
+#ryxugnlawb .gt_heading {
+background-color: #FFFFFF;
+text-align: center;
+border-bottom-color: #FFFFFF;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#ryxugnlawb .gt_bottom_border {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#ryxugnlawb .gt_col_headings {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+}
+#ryxugnlawb .gt_col_heading {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 5px;
+padding-right: 5px;
+overflow-x: hidden;
+}
+#ryxugnlawb .gt_column_spanner_outer {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: normal;
+text-transform: inherit;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 4px;
+padding-right: 4px;
+}
+#ryxugnlawb .gt_column_spanner_outer:first-child {
+padding-left: 0;
+}
+#ryxugnlawb .gt_column_spanner_outer:last-child {
+padding-right: 0;
+}
+#ryxugnlawb .gt_column_spanner {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: bottom;
+padding-top: 5px;
+padding-bottom: 5px;
+overflow-x: hidden;
+display: inline-block;
+width: 100%;
+}
+#ryxugnlawb .gt_spanner_row {
+border-bottom-style: hidden;
+}
+#ryxugnlawb .gt_group_heading {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+text-align: left;
+}
+#ryxugnlawb .gt_empty_group_heading {
+padding: 0.5px;
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+vertical-align: middle;
+}
+#ryxugnlawb .gt_from_md > :first-child {
+margin-top: 0;
+}
+#ryxugnlawb .gt_from_md > :last-child {
+margin-bottom: 0;
+}
+#ryxugnlawb .gt_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin: 10px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 1px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 1px;
+border-right-color: #D3D3D3;
+vertical-align: middle;
+overflow-x: hidden;
+}
+#ryxugnlawb .gt_stub {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+}
+#ryxugnlawb .gt_stub_row_group {
+color: #333333;
+background-color: #FFFFFF;
+font-size: 100%;
+font-weight: initial;
+text-transform: inherit;
+border-right-style: solid;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+padding-left: 5px;
+padding-right: 5px;
+vertical-align: top;
+}
+#ryxugnlawb .gt_row_group_first td {
+border-top-width: 2px;
+}
+#ryxugnlawb .gt_row_group_first th {
+border-top-width: 2px;
+}
+#ryxugnlawb .gt_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#ryxugnlawb .gt_first_summary_row {
+border-top-style: solid;
+border-top-color: #D3D3D3;
+}
+#ryxugnlawb .gt_first_summary_row.thick {
+border-top-width: 2px;
+}
+#ryxugnlawb .gt_last_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#ryxugnlawb .gt_grand_summary_row {
+color: #333333;
+background-color: #FFFFFF;
+text-transform: inherit;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#ryxugnlawb .gt_first_grand_summary_row {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-top-style: double;
+border-top-width: 6px;
+border-top-color: #D3D3D3;
+}
+#ryxugnlawb .gt_last_grand_summary_row_top {
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 5px;
+padding-right: 5px;
+border-bottom-style: double;
+border-bottom-width: 6px;
+border-bottom-color: #D3D3D3;
+}
+#ryxugnlawb .gt_striped {
+background-color: rgba(128, 128, 128, 0.05);
+}
+#ryxugnlawb .gt_table_body {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #D3D3D3;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+}
+#ryxugnlawb .gt_footnotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#ryxugnlawb .gt_footnote {
+margin: 0px;
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#ryxugnlawb .gt_sourcenotes {
+color: #333333;
+background-color: #FFFFFF;
+border-bottom-style: none;
+border-bottom-width: 2px;
+border-bottom-color: #D3D3D3;
+border-left-style: none;
+border-left-width: 2px;
+border-left-color: #D3D3D3;
+border-right-style: none;
+border-right-width: 2px;
+border-right-color: #D3D3D3;
+}
+#ryxugnlawb .gt_sourcenote {
+font-size: 90%;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#ryxugnlawb .gt_left {
+text-align: left;
+}
+#ryxugnlawb .gt_center {
+text-align: center;
+}
+#ryxugnlawb .gt_right {
+text-align: right;
+font-variant-numeric: tabular-nums;
+}
+#ryxugnlawb .gt_font_normal {
+font-weight: normal;
+}
+#ryxugnlawb .gt_font_bold {
+font-weight: bold;
+}
+#ryxugnlawb .gt_font_italic {
+font-style: italic;
+}
+#ryxugnlawb .gt_super {
+font-size: 65%;
+}
+#ryxugnlawb .gt_footnote_marks {
+font-size: 75%;
+vertical-align: 0.4em;
+position: initial;
+}
+#ryxugnlawb .gt_asterisk {
+font-size: 100%;
+vertical-align: 0;
+}
+#ryxugnlawb .gt_indent_1 {
+text-indent: 5px;
+}
+#ryxugnlawb .gt_indent_2 {
+text-indent: 10px;
+}
+#ryxugnlawb .gt_indent_3 {
+text-indent: 15px;
+}
+#ryxugnlawb .gt_indent_4 {
+text-indent: 20px;
+}
+#ryxugnlawb .gt_indent_5 {
+text-indent: 25px;
+}
+#ryxugnlawb .katex-display {
+display: inline-flex !important;
+margin-bottom: 0.75em !important;
+}
+#ryxugnlawb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="4" class="gt_heading gt_title gt_font_normal">Candidate feature before and after adjustment for QAlb</td>
+</tr>
+<tr class="gt_heading even">
+<td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Firth penalised fits; a ratio above 1 means the effect grew</td>
+</tr>
+<tr class="gt_col_headings header">
+<th id="Analysis" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Analysis</th>
+<th id="OR-per-doubling" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">OR per doubling</th>
+<th id="OR-adjusted-for-QAlb" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">OR adjusted for QAlb</th>
+<th id="Ratio-of-log-odds" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Ratio of log-odds</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Analysis">Primary (n = 113)</td>
+<td class="gt_row gt_right" headers="OR per doubling">0.2470</td>
+<td class="gt_row gt_right" headers="OR adjusted for QAlb">0.2530</td>
+<td class="gt_row gt_right" headers="Ratio of log-odds">0.983</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Analysis">Eginitio (n = 43)</td>
+<td class="gt_row gt_right" headers="OR per doubling">0.0424</td>
+<td class="gt_row gt_right" headers="OR adjusted for QAlb">0.0306</td>
+<td class="gt_row gt_right" headers="Ratio of log-odds">1.103</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Looking at the odds-ratios (i.e. OR), the association does not weaken. In the pooled or primary analysis the odds ratio is essentially unchanged; in the Eginitio only analysis it moves slightly further from 1, so the log-odds grows by about a tenth rather than shrinking. This indicates that whatever the top lipid is tracking, it is not blood-brain-barrier permeability. Nor is the reverse plausible (i.e. that barrier leakage is a step between disease and lipid, and adjusting for it has removed part of a real effect) since QAlb barely differs between the groups in the first place.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>OR differences from an unpenalised fit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The same comparison fitted without Firth’s penalty gives, at Eginitio, an odds ratio of 0.018 before adjustment and 0.008 after i.e. a shift of about 20% on the log-odds scale rather than the 10% reported above. Both of those come from an ordinary logistic model with five or six parameters fitted to 43 patients, only 20 of whom have CIS, which is exactly the situation where unpenalised estimates get pushed away from 1. Firth’s penalty pulls them back to 0.042 and 0.031, and roughly halves the apparent shift. The penalised figures are the ones used above, as they are throughout this report.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="technical-quality-control" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Technical quality control</h1>
 <section id="freeze-thaw-degradation-in-auth-batch1" class="level2">
 <h2 class="anchored" data-anchor-id="freeze-thaw-degradation-in-auth-batch1">Freeze-thaw degradation in AUTH batch1</h2>
 <p>AUTH batch1 was excluded from discovery and its degradation characterised directly. Both AUTH batches were analysed in the same instrument sequence, so everything downstream of the freezer was identical, making the comparison a clean natural experiment. The comparison was restricted to MS patients so that group composition cannot explain it.</p>
@@ -12415,8 +13330,8 @@ height: 0px !important;
 <p>Both features are unannotated. They co-elute and are strongly correlated, which is why they cluster together, and the <em>cluster</em> is selected in approximately 75% of primary bootstrap replicates while which member represents it varies (52% and 24% respectively). Whether these represent one analyte detected as two ions or two co-eluting species is an analytical question requiring MS/MS spectra; it affects how the result should be reported.</p>
 </section>
 </section>
-<section id="limitations" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Limitations</h1>
+<section id="limitations" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Limitations</h1>
 <div class="cell">
 <div class="cell-output-display">
 <div id="rcdihfmcwt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -12862,14 +13777,14 @@ height: 0px !important;
 </div>
 </div>
 </section>
-<section id="conclusions" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Conclusions</h1>
+<section id="conclusions" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Conclusions</h1>
 <p>The serum lipidome differs across the CIS–MS spectrum in this cohort, but the difference is centre-dependent. One feature is statistically robust in the pooled data after correcting for multiplicity with a null that preserves the recruiting-centre structure, yet contributes less than four points of C-index beyond centre, age and sex. Within the single centre with balanced group sizes it is highly stable and strongly discriminating, but that analysis is exploratory, its effect size is inflated, and there is no independent sample left to check it against.</p>
 <p>The defensible claim is that this feature shows a large, well-behaved association at one centre; that the association differs significantly across centres; and that the only independent sample was too small and too technically compromised to make a formal judgement. That is more of a hypothesis worth testing properly in a new cohort, not a claim of a biomarker.</p>
 <p>Two additions would substantially strengthen the work: treatment and steroid exposure data, which could convert an unexplained centre effect into an explained one, and validation in a genuinely independent cohort with adequate CIS representation at more than one site.</p>
 </section>
-<section id="reproducibility-1" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Reproducibility</h1>
+<section id="reproducibility-1" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Reproducibility</h1>
 <div class="cell">
 <div class="cell-output-display">
 <div id="dlutrwgnhe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">

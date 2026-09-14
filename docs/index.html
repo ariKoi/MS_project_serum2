@@ -3644,12 +3644,12 @@ window.Quarto = {
   <li><a href="#effect-size" id="toc-effect-size" class="nav-link" data-scroll-target="#effect-size">Effect size</a></li>
   <li><a href="#sub-threshold-features" id="toc-sub-threshold-features" class="nav-link" data-scroll-target="#sub-threshold-features">Sub-threshold features</a></li>
   </ul></li>
-  <li><a href="#sensitivity-analyses" id="toc-sensitivity-analyses" class="nav-link" data-scroll-target="#sensitivity-analyses"><span class="header-section-number">8</span> Sensitivity analyses</a>
+  <li><a href="#qalb-sensitivity-analysis" id="toc-qalb-sensitivity-analysis" class="nav-link" data-scroll-target="#qalb-sensitivity-analysis"><span class="header-section-number">8</span> QAlb Sensitivity Analysis</a>
   <ul class="collapse">
   <li><a href="#adjustment-for-blood-brain-barrier-integrity" id="toc-adjustment-for-blood-brain-barrier-integrity" class="nav-link" data-scroll-target="#adjustment-for-blood-brain-barrier-integrity">Adjustment for blood-brain-barrier integrity</a>
   <ul class="collapse">
-  <li><a href="#what-qalb-looks-like-across-the-two-groups" id="toc-what-qalb-looks-like-across-the-two-groups" class="nav-link" data-scroll-target="#what-qalb-looks-like-across-the-two-groups">What QAlb looks like across the two groups</a></li>
-  <li><a href="#the-candidate-feature-with-and-without-adjustment" id="toc-the-candidate-feature-with-and-without-adjustment" class="nav-link" data-scroll-target="#the-candidate-feature-with-and-without-adjustment">The candidate feature, with and without adjustment</a></li>
+  <li><a href="#qalb-across-the-two-groups" id="toc-qalb-across-the-two-groups" class="nav-link" data-scroll-target="#qalb-across-the-two-groups">QAlb across the two groups</a></li>
+  <li><a href="#the-selected-lipid-feature-with-and-without-adjustment" id="toc-the-selected-lipid-feature-with-and-without-adjustment" class="nav-link" data-scroll-target="#the-selected-lipid-feature-with-and-without-adjustment">The selected lipid feature, with and without adjustment</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#technical-quality-control" id="toc-technical-quality-control" class="nav-link" data-scroll-target="#technical-quality-control"><span class="header-section-number">9</span> Technical quality control</a>
@@ -11059,15 +11059,15 @@ height: 0px !important;
 <p>The one worth naming individually is <code>lip_662_44636_Da_484_50_s</code>: inclusion frequency 0.37 in the primary analysis and 0.28 at Eginitio, adjusted <span class="math inline">\(p = 0.0039\)</span> with OR 0.013. It survives FDR in neither analysis, but it is the only secondary candidate that ranks near the top in both.</p>
 </section>
 </section>
-<section id="sensitivity-analyses" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Sensitivity analyses</h1>
+<section id="qalb-sensitivity-analysis" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> QAlb Sensitivity Analysis</h1>
 <section id="adjustment-for-blood-brain-barrier-integrity" class="level2">
 <h2 class="anchored" data-anchor-id="adjustment-for-blood-brain-barrier-integrity">Adjustment for blood-brain-barrier integrity</h2>
-<p>The albumin quotient, QAlb, is CSF albumin divided by serum albumin and multiplied by 1000. Albumin is made in the liver and not in the brain, so whatever is found in cerebrospinal fluid has crossed the blood-brain barrier; the ratio is therefore a standard measure of how permeable that barrier is. A raised QAlb means a leakier barrier.</p>
+<p>The albumin quotient, QAlb, is CSF albumin divided by serum albumin and multiplied by 1000. Since albumin is made in the liver (instead of in the brain), whatever is found in cerebrospinal fluid has crossed the blood-brain barrier; the ratio can be therefore seen as a standard measure of how permeable that barrier is. A raised QAlb points to a leakier barrier.</p>
 <p>This matters because of an alternative explanation for the candidate feature. If barrier permeability differs between CIS and MS patients, and if a leakier barrier changes what appears in serum, then a lipid associated with disease status might be tracking barrier integrity rather than anything specific to the disease. Adjusting for QAlb tests that: if the association were a barrier readout, it should shrink towards no effect once QAlb is in the model.</p>
-<p>QAlb is not in the main models for a separate reason. Obtaining it requires a lumbar puncture, and a blood test that needs a lumbar puncture to work has given up its main practical advantage. It is used here only as a check on the candidate, not as a predictor.</p>
-<section id="what-qalb-looks-like-across-the-two-groups" class="level3">
-<h3 class="anchored" data-anchor-id="what-qalb-looks-like-across-the-two-groups">What QAlb looks like across the two groups</h3>
+<p>In addition, QAlb is not in the main model for a separate reason. Obtaining it requires a lumbar puncture, and a blood test that needs a lumbar puncture to work has given up its main practical advantage. It is used here only as a check on the candidate, not as a predictor.</p>
+<section id="qalb-across-the-two-groups" class="level3">
+<h3 class="anchored" data-anchor-id="qalb-across-the-two-groups">QAlb across the two groups</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fwqaxsqpwr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -11514,8 +11514,8 @@ height: 0px !important;
 <p>Either way, because the barrier leakage is almost the same in both groups, it cannot explain the differences between them.</p>
 <p>Every patient in the analysis cohort has a QAlb value, because lumbar puncture is part of standard diagnostic testing for both CIS and MS. This check therefore runs on measured values across the whole sample, with no imputation. It is also one place where excluding the healthy controls helps: they would mostly have had no CSF sample, since there is no clinical reason to perform a lumbar puncture on a healthy volunteer, and missingness would have lined up almost exactly with group membership i.e. restricting to CIS and MS removes the problem, because both groups get the procedure as a matter of clinical routine.</p>
 </section>
-<section id="the-candidate-feature-with-and-without-adjustment" class="level3">
-<h3 class="anchored" data-anchor-id="the-candidate-feature-with-and-without-adjustment">The candidate feature, with and without adjustment</h3>
+<section id="the-selected-lipid-feature-with-and-without-adjustment" class="level3">
+<h3 class="anchored" data-anchor-id="the-selected-lipid-feature-with-and-without-adjustment">The selected lipid feature, with and without adjustment</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div id="ryxugnlawb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
